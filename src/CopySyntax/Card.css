@@ -1,0 +1,14 @@
+.card{
+
+    width: 30%;
+    height: 15%;
+}
+.card >img{
+
+    width: 10rem;
+    height: 10rem;
+}
+.text-body-secondary
+{
+    cursor: pointer;
+}

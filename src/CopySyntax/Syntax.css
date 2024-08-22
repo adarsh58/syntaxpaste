@@ -1,0 +1,67 @@
+.Syntax {
+    max-width: 1536px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    gap:1rem;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  /* 2xl */
+@media (max-width: 1536px) {
+    .Syntax {
+      max-width: 1280px;
+    }
+  }
+  
+  /* xl */
+  @media (max-width: 1280px) {
+    .Syntax {
+      max-width: 1024px;
+    }
+  }
+  
+  /* lg */
+  @media (max-width: 1024px) {
+    .Syntax {
+      max-width: 768px;
+    }
+  }
+  
+  /* md */
+  @media (max-width: 768px) {
+    .Syntax {
+      max-width: 640px;
+    }
+  }
+  
+  /* sm */
+  @media (max-width: 640px) {
+    .Syntax {
+      max-width: 475px;
+    }
+  }
+  
+  /* xs */
+  @media (max-width: 475px) {
+    .Syntax {
+      width: 100%;
+    }
+  
+    @media (max-width: 300px) {
+      .Syntax {
+        width: 100%;
+      }
+  
+      @media (max-width: 100px) {
+        .Syntax {
+          width: 100%;
+        }
+    }}}
+  
