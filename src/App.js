@@ -3,8 +3,9 @@ import './App.css';
 import Heading from './Component/Home/Heading';
 import Info from './Component/Info/Info';
 import NavBar from './Component/Navbar/NavBar';
-import Syntax from './CopySyntax/Syntax';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SyntaxContainer from './CopySyntax/SyntaxContainer';
 function App() {
   return (
     <div className="App">
@@ -23,7 +24,7 @@ function App() {
             <Info />
 
           </div> </>} />
-          <Route exact path="/syntax" element={<Syntax />} />
+          <Route exact path="/syntax" element={<><SyntaxContainer /></>} />
         </Routes>
       </BrowserRouter>
 

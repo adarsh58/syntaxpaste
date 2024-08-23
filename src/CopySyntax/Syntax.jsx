@@ -1,16 +1,15 @@
 import React from 'react'
 import './Syntax.css'
 import Card from './Card'
-import CodePlayGround from './CodePlayGround/Modal'
 
 
-const Syntax = () => {
+
+const Syntax = (props) => {
+
+    
   return (
     <div className='Syntax'>
-      <Card/>
-        <CodePlayGround/>
-
-   
+      <Card data={props.item}/>
     </div>
   )
 }

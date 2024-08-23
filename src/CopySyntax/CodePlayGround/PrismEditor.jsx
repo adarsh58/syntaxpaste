@@ -5,17 +5,18 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism.css'; //Example style, you can use another
 import './PrismEditor.css'
-const PrismEditor=()=> {
+const PrismEditor=({codeText})=> {
   const [code, setCode] = React.useState(
-    `function add(a, b) {\n  return a + b;\n}`
+    codeText
   );
+
   return (
     <Editor className='Editor'
       value={code}
       onValueChange={code => setCode(code)}
       highlight={code => highlight(code, languages.js)}
       padding={10}
-      disabled={true}
+      
       style={{
         fontFamily: '"JetBrains","Fira code", "Fira Mono", monospace',
         fontSize:13

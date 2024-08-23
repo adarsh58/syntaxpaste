@@ -1,4 +1,4 @@
-.Syntax {
+.Syntax .SyntaxContainer {
     max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
@@ -15,52 +15,52 @@
 
   /* 2xl */
 @media (max-width: 1536px) {
-    .Syntax {
+    .Syntax .SyntaxContainer {
       max-width: 1280px;
     }
   }
   
   /* xl */
   @media (max-width: 1280px) {
-    .Syntax {
+    .Syntax .SyntaxContainer {
       max-width: 1024px;
     }
   }
   
   /* lg */
   @media (max-width: 1024px) {
-    .Syntax {
+    .Syntax .SyntaxContainer {
       max-width: 768px;
     }
   }
   
   /* md */
   @media (max-width: 768px) {
-    .Syntax {
+    .Syntax .SyntaxContainer {
       max-width: 640px;
     }
   }
   
   /* sm */
   @media (max-width: 640px) {
-    .Syntax {
+    .Syntax .SyntaxContainer  {
       max-width: 475px;
     }
   }
   
   /* xs */
   @media (max-width: 475px) {
-    .Syntax {
+    .Syntax .SyntaxContainer  {
       width: 100%;
     }
   
     @media (max-width: 300px) {
-      .Syntax {
+      .Syntax .SyntaxContainer {
         width: 100%;
       }
   
       @media (max-width: 100px) {
-        .Syntax {
+        .Syntax .SyntaxContainer {
           width: 100%;
         }
     }}}
