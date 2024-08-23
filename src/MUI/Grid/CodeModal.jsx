@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import CopyCode from "../../CopySyntax/CodePlayGround/CopyCode";
 
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -40,6 +41,7 @@ export default function CodeModal(props) {
               return <CopyCode file={i.File} code={i.Syntax} />;
             })}
           </Typography>
+       
         </Box>
       </Modal>
     </div>

@@ -1,66 +1,77 @@
-.Syntax .SyntaxContainer {
-    max-width: 1536px;
+.SyntaxContainer
+
+{  max-width: 1536px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    
+ 
+
+    
+
+}
+
+.Syntax  {
+  
     display: flex;
     gap:1rem;
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    flex-wrap: wrap;
+    gap: 1rem;
     margin-top: 2rem;
+   
   }
 
   /* 2xl */
 @media (max-width: 1536px) {
-    .Syntax .SyntaxContainer {
+     .SyntaxContainer {
       max-width: 1280px;
     }
   }
   
   /* xl */
   @media (max-width: 1280px) {
-    .Syntax .SyntaxContainer {
+     .SyntaxContainer {
       max-width: 1024px;
     }
   }
   
   /* lg */
   @media (max-width: 1024px) {
-    .Syntax .SyntaxContainer {
+     .SyntaxContainer {
       max-width: 768px;
     }
   }
   
   /* md */
   @media (max-width: 768px) {
-    .Syntax .SyntaxContainer {
+    .SyntaxContainer {
       max-width: 640px;
     }
   }
   
   /* sm */
   @media (max-width: 640px) {
-    .Syntax .SyntaxContainer  {
+     .SyntaxContainer  {
       max-width: 475px;
     }
   }
   
   /* xs */
   @media (max-width: 475px) {
-    .Syntax .SyntaxContainer  {
+    .SyntaxContainer  {
       width: 100%;
     }
   
     @media (max-width: 300px) {
-      .Syntax .SyntaxContainer {
+       .SyntaxContainer {
         width: 100%;
       }
   
       @media (max-width: 100px) {
-        .Syntax .SyntaxContainer {
+     .SyntaxContainer {
           width: 100%;
         }
     }}}

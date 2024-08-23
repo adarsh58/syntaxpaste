@@ -10,18 +10,23 @@ const PrismEditor=({codeText})=> {
     codeText
   );
 
+
   return (
+    <>
     <Editor className='Editor'
       value={code}
       onValueChange={code => setCode(code)}
       highlight={code => highlight(code, languages.js)}
       padding={10}
-      
+      disabled={true}
       style={{
         fontFamily: '"JetBrains","Fira code", "Fira Mono", monospace',
         fontSize:13
       }}
     />
+    <div className="btn">   <button type="button" onClick={() =>  navigator.clipboard.writeText(`${code}`)} className="btn btn-outline-warning btn-sm">Click To Copy</button></div>
+ 
+    </>
   );
 }
 export default PrismEditor

@@ -26,6 +26,46 @@ export const Data=[
                 Syntax : `function add(a, b) {\n  return a ++ b2;\n}`
             }
         ]
+    },{
+        Category:"Reactjs",
+        Concept :"Add",
+        Img:reactjs,
+        Code :[
+            {
+                File :"Index.js",
+                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+            }
+        ]
+    },{
+        Category:"Reactjs",
+        Concept :"Add",
+        Img:reactjs,
+        Code :[
+            {
+                File :"Index.js",
+                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+            }
+        ]
+    },{
+        Category:"Reactjs",
+        Concept :"Add",
+        Img:reactjs,
+        Code :[
+            {
+                File :"Index.js",
+                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+            }
+        ]
+    },{
+        Category:"Reactjs",
+        Concept :"Add",
+        Img:reactjs,
+        Code :[
+            {
+                File :"Index.js",
+                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+            }
+        ]
     }
 
 ];

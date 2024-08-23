@@ -1,6 +1,7 @@
 import React from "react";
 import PrismEditor from "./PrismEditor";
 import './CopyCode.css'
+
 const CopyCode = ({file,code}) => {
 
   return (
@@ -10,6 +11,7 @@ const CopyCode = ({file,code}) => {
         <div className="row">
           <div className="col-lg-3 col-md-3 col-xs-12 file">{file}</div>
           <div className="col-lg-9 col-md-9 col-xs-12 code"><PrismEditor codeText={code}/></div>
+         
         </div>
       </div>
     </div>
