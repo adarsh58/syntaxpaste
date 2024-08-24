@@ -1,6 +1,16 @@
 .css-1wnsr1i{
-    width: 50% !important;
+    width: 70% !important;
     overflow:scroll!important;
     height:100%!important;
     display:block!important;
+    z-index: 1;
+}
+
+  
+  /* xs */
+  @media (max-width: 1070px) {
+    .css-1wnsr1i  {
+        width: 97% !important;
+        height: 97% !important;
+    }
 }

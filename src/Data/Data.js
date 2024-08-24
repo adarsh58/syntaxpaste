@@ -11,7 +11,99 @@ export const Data=[
             {
                 Logic:"",
                 File :"",
-                Syntax : ``
+                Syntax : `//ADD NOTE
+  const AddNote =async (title, description, tag) => {
+
+     const response = await fetch({host}/api/notes/addnotes, {
+      method: 'post',
+      headers: {
+        "auth-token":localStorage.getItem("token"),
+        "Content-Type" : "application/json"
+      },
+      body:JSON.stringify({title, description, tag})
+    });
+
+    const json=await response.json();
+    console.log(json.errors);
+
+    if(!json.errors)
+    {
+    setNote(notes.concat(json.note));
+  }
+  }
+`
+            }, {
+                Logic:"",
+                File :"",
+                Syntax : `//ADD NOTE
+  const AddNote =async (title, description, tag) => {
+
+     const response = await fetch({host}/api/notes/addnotes, {
+      method: 'post',
+      headers: {
+        "auth-token":localStorage.getItem("token"),
+        "Content-Type" : "application/json"
+      },
+      body:JSON.stringify({title, description, tag})
+    });
+
+    const json=await response.json();
+    console.log(json.errors);
+
+    if(!json.errors)
+    {
+    setNote(notes.concat(json.note));
+  }
+  }
+`
+            }, {
+                Logic:"",
+                File :"",
+                Syntax : `//ADD NOTE
+  const AddNote =async (title, description, tag) => {
+
+     const response = await fetch({host}/api/notes/addnotes, {
+      method: 'post',
+      headers: {
+        "auth-token":localStorage.getItem("token"),
+        "Content-Type" : "application/json"
+      },
+      body:JSON.stringify({title, description, tag})
+    });
+
+    const json=await response.json();
+    console.log(json.errors);
+
+    if(!json.errors)
+    {
+    setNote(notes.concat(json.note));
+  }
+  }
+`
+            }, {
+                Logic:"",
+                File :"",
+                Syntax : `//ADD NOTE
+  const AddNote =async (title, description, tag) => {
+
+     const response = await fetch({host}/api/notes/addnotes, {
+      method: 'post',
+      headers: {
+        "auth-token":localStorage.getItem("token"),
+        "Content-Type" : "application/json"
+      },
+      body:JSON.stringify({title, description, tag})
+    });
+
+    const json=await response.json();
+    console.log(json.errors);
+
+    if(!json.errors)
+    {
+    setNote(notes.concat(json.note));
+  }
+  }
+`
             }
         ]
     },

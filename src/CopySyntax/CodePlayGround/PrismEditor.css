@@ -4,3 +4,15 @@ justify-content: center;
 align-items: center;
 
 }
+
+.Editor
+{
+    font-size: 13px !important;
+}
+ /* xs */
+ @media (max-width: 1070px) {
+    .Editor
+{
+    font-size: 10px !important;
+}
+}
