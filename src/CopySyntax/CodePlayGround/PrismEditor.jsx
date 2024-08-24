@@ -24,7 +24,7 @@ const PrismEditor=({codeText})=> {
         fontSize:13
       }}
     />
-    <div className="btn">   <button type="button" onClick={() =>  navigator.clipboard.writeText(`${code}`)} className="btn btn-outline-warning btn-sm">Click To Copy</button></div>
+    <div className="btn">   <button type="button" disabled={!codeText} onClick={() =>  navigator.clipboard.writeText(`${code}`)} className="btn btn-outline-warning btn-sm">Click To Copy</button></div>
  
     </>
   );
