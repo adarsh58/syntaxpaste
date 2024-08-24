@@ -11,7 +11,7 @@ const Card = (props) => {
     <div className="Card-body">
       <h5 className="Card-title">{props.data.Category}</h5>    
       <p className="Card-text">{props.data.Concept}</p>
-      <CodeEditor code={props.data.Code} />
+      <CodeEditor concept={props.data.Concept} code={props.data.Code} />
       
     </div>
   

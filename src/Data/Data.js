@@ -9,7 +9,7 @@ export const Data = [
         Img: Mongo,
         Code: [
             {
-                Logic: "npm install -g nodemon and To nun package nodemon ./index.js",
+                Logic: "npm install -g nodemon and To run package nodemon ./index.js",
                 File: "Db.js",
                 Syntax: `const mongoose = require('mongoose');
 const mongoURI = "mongodb+srv://adarsh:mko0(IJN@clusterone.5gdhtf1.mongodb.net/?retryWrites=true&w=majority&appName=ClusterOne"

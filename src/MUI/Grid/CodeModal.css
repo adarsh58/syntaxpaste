@@ -1,16 +1,24 @@
 .css-1wnsr1i{
     width: 70% !important;
     overflow:scroll!important;
-    height:100%!important;
+    height:70%!important;
     display:block!important;
     z-index: 1;
 }
-
+.btnClose {
+    display: flex;
+    justify-content: center;
+}
+.concept{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
   
   /* xs */
   @media (max-width: 1070px) {
     .css-1wnsr1i  {
         width: 97% !important;
-        height: 97% !important;
+        height:70%!important;
     }
 }
