@@ -5,7 +5,7 @@ npm install @mui/material @mui/styled-engine-sc styled-components
 npm install @fontsource/roboto
 npm i react-simple-code-editor
 npm i prismjs
- npm i react-router-dom
+npm i react-router-dom
 
 
 

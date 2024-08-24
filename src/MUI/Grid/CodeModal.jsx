@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import CopyCode from "../../CopySyntax/CodePlayGround/CopyCode";
-
+import './CodeModal.css'
 
 const style = {
   position: "absolute",
@@ -38,7 +38,7 @@ export default function CodeModal(props) {
           </Typography>
           <Typography id="modal-modal-title" variant="h10" component="h4">
             {props.code.map((i) => {
-              return <CopyCode file={i.File} code={i.Syntax} />;
+              return <CopyCode file={i.File} Logic={i.Logic} code={i.Syntax} />;
             })}
           </Typography>
        

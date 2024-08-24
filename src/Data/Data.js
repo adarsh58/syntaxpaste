@@ -1,71 +1,174 @@
-import reactjs from './reactjs.png'
-
+import react from './React.png'
+import MongoD from './MongoD.png'
+const kittenHeader = require('./React.png')
+const m = require('./MongoD.png')
 export const Data=[
     {
-        Category:"Reactjs",
-        Concept :"Add",
-        Img:reactjs,
+        Category:"MongoD",
+        Concept :"",
+        Img:m,
         Code :[
             {
-                File :"Index.js",
-                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+                Logic:"",
+                File :"",
+                Syntax : ``
             }
         ]
     },
     {
-        Category:"ReactTS",
-        Concept :"sub",
-        Img:reactjs,
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
         Code :[
             {
-                File :"Index.js",
-                Syntax : `function add(a, b) {\n  return a - b3;\n}`
-            },
-            {
-                File :"Index2.js",
-                Syntax : `function add(a, b) {\n  return a ++ b2;\n}`
+                Logic:"",
+                File :"",
+                Syntax : ``
             }
         ]
-    },{
+    },
+    {
         Category:"Reactjs",
-        Concept :"Add",
-        Img:reactjs,
+        Concept :"",
+        Img:kittenHeader,
         Code :[
             {
-                File :"Index.js",
-                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+                Logic:"",
+                File :"",
+                Syntax : ``
             }
         ]
-    },{
+    },
+    {
         Category:"Reactjs",
-        Concept :"Add",
-        Img:reactjs,
+        Concept :"",
+        Img:kittenHeader,
         Code :[
             {
-                File :"Index.js",
-                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+                Logic:"",
+                File :"",
+                Syntax : ``
             }
         ]
-    },{
+    },
+    {
         Category:"Reactjs",
-        Concept :"Add",
-        Img:reactjs,
+        Concept :"",
+        Img:kittenHeader,
         Code :[
             {
-                File :"Index.js",
-                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+                Logic:"",
+                File :"",
+                Syntax : ``
             }
         ]
-    },{
+    },
+    {
         Category:"Reactjs",
-        Concept :"Add",
-        Img:reactjs,
+        Concept :"",
+        Img:kittenHeader,
         Code :[
             {
-                File :"Index.js",
-                Syntax : `function add(a, b) {\n  return a - b1;\n}`
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
+            }
+        ]
+    },
+    {
+        Category:"Reactjs",
+        Concept :"",
+        Img:kittenHeader,
+        Code :[
+            {
+                Logic:"",
+                File :"",
+                Syntax : ``
             }
         ]
     }
-
 ];

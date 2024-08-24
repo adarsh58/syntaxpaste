@@ -5,14 +5,13 @@ import CodeEditor from './CodeEditor/CodeEditor'
 const Card = (props) => {
   
   return (
-    <div className="card">
+    <div className="Card">
     <img src={react}/>
     
-    <div className="card-body">
-      <h5 className="card-title">{props.data.Category}</h5>
-      
-      <p className="card-text">{props.data.Concept}</p>
-      <CodeEditor code={props.data.Code} c={props.data.Category}/>
+    <div className="Card-body">
+      <h5 className="Card-title">{props.data.Category}</h5>    
+      <p className="Card-text">{props.data.Concept}</p>
+      <CodeEditor code={props.data.Code} />
       
     </div>
   

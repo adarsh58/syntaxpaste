@@ -6,12 +6,14 @@ const SyntaxContainer = () => {
    
   return (
     <div className='SyntaxContainer'>
+       <div className='Syntax'>
       {Data.map((item)=>{
         
         return(
         <Syntax item={item} />
         )
       })}
+         </div>
     </div>
   )
 }

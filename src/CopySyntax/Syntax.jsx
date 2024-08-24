@@ -5,7 +5,7 @@ import Card from './Card'
 const Syntax = (props) => {
 
   return (
-    <div className='Syntax'>
+    <div className="CardSyntax" >
       <Card data={props.item}/>
     </div>
   )

@@ -2,11 +2,15 @@
  .row
 {
     display: flex;  
-    align-items: center;
+    align-items: start;
     justify-content: start;
 }
 
 .file
 {
     font-size: x-small !important;
+}
+.File-Span
+{
+    font-weight: bold;
 }
