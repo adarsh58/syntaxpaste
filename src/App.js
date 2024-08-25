@@ -16,12 +16,8 @@ function App() {
      
 
         <Routes>
-          <Route exact path="/" element={<> <div className="container">
-            <Heading />
-            <Info />
-
-          </div> </>} />
-          <Route exact path="/home" element={<> <div className="container">
+          <Route exact path="/" element={<><SyntaxContainer /></>} />
+          <Route exact path="/aboutus" element={<> <div className="container">
             <Heading />
             <Info />
            

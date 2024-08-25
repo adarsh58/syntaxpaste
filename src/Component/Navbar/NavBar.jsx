@@ -11,30 +11,12 @@ const NavBar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <Link className="nav-link " aria-current="page" to="/home">Home</Link>
+            <Link className="nav-link " aria-current="page" to="/syntax">Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/syntax">Copy Syntax</Link>
-          </li>
-          <li className="nav-item dropdown">
-            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dont Click
-            </a>
-            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a className="dropdown-item" href="#">Why</a></li>
-              <li><a className="dropdown-item" href="#">Did</a></li>
-              <li><hr className="dropdown-divider"/></li>
-              <li><a className="dropdown-item" href="#">YOU CLICK?</a></li>
-            </ul>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link disabled">Coming soon..</a>
+            <Link className="nav-link" to="/aboutus">About Us</Link>
           </li>
         </ul>
-        <form className="d-flex">
-          
-        <label className="nav-link active"  href="/about me">About me</label>
-        </form>
       </div>
     </div>
   </nav>
