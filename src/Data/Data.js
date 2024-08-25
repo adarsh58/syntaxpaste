@@ -4,21 +4,21 @@ import React from 'react';
 const kittenHeader = require('./React.png')
 const Mongo = require('./MongoD.png')
 
-const REACT="ReactJs";
-const MongoDB="MongoDB";
-const EXPRESS="ExpressJs";
-const LOGIC="Logic"
+const REACT = "ReactJs";
+const MongoDB = "MongoDB";
+const EXPRESS = "ExpressJs";
+const LOGIC = "Logic"
 
 export const Data = [
-    {
-        Category: MongoDB,
-        Concept: "Setup Connection",
-        Img: Mongo,
-        Code: [
-            {
-                Logic: "npm install -g nodemon and To run package nodemon ./index.js",
-                File: "Db.js",
-                Syntax: `const mongoose = require('mongoose');
+  {
+    Category: MongoDB,
+    Concept: "Setup Connection",
+    Img: Mongo,
+    Code: [
+      {
+        Logic: "npm install -g nodemon and To run package nodemon ./index.js",
+        File: "Db.js",
+        Syntax: `const mongoose = require('mongoose');
 const mongoURI = "mongodb+srv://adarsh:mko0(IJN@clusterone.5gdhtf1.mongodb.net/?retryWrites=true&w=majority&appName=ClusterOne"
 
 
@@ -28,32 +28,32 @@ const connectToMongo = () => {
 }
     
 module.exports =connectToMongo; `
-            },
-            {
-                Logic: "",
-                File: "Index.js",
-                Syntax: `const connectToMongo = require('./db');
+      },
+      {
+        Logic: "",
+        File: "Index.js",
+        Syntax: `const connectToMongo = require('./db');
 connectToMongo(); `
-            }
+      }
 
-        ]
-    }
-    ,{
-      Category: EXPRESS,
-      Concept: "Setting up API's",
-      Img: Mongo,
-      Code: [
-          {
-              Logic: "Setting API endpoint and Express Initialization,Please Run these NPM "
-+'\nnpm i bcrypt\n'
-+'\nnpm i express\n'
-+'\nnpm i mongoose\n'
-+'npm install -g nodemon'
-+'npm i express-validator'
-+'npm install cors'
-+'npm run start',
-              File: "Index.js",
-              Syntax: `const connectToMongo = require('./db');
+    ]
+  }
+  , {
+    Category: EXPRESS,
+    Concept: "Setting up API's",
+    Img: Mongo,
+    Code: [
+      {
+        Logic: "Setting API endpoint and Express Initialization,Please Run these NPM "
+          + '\nnpm i bcrypt\n'
+          + '\nnpm i express\n'
+          + '\nnpm i mongoose\n'
+          + 'npm install -g nodemon'
+          + 'npm i express-validator'
+          + 'npm install cors'
+          + 'npm run start',
+        File: "Index.js",
+        Syntax: `const connectToMongo = require('./db');
 const express = require('express')
 var cors = require('cors')
 connectToMongo();
@@ -69,11 +69,11 @@ app.use('/api/notes', require('./routes/notes'))
 app.listen(port, () => {
   console.log(Example app listening on port {port})
 })`
-          },
-          {
-              Logic: "Model ",
-              File: "Note.js",
-              Syntax: `
+      },
+      {
+        Logic: "Model ",
+        File: "Note.js",
+        Syntax: `
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
@@ -102,11 +102,11 @@ const NotesSchema = new Schema({
 
   module.exports = mongoose.model('note', NotesSchema);
 `
-          },
-          {
-              Logic: "Model",
-              File: "User.js",
-              Syntax: `const mongoose = require('mongoose');
+      },
+      {
+        Logic: "Model",
+        File: "User.js",
+        Syntax: `const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const UserSchema = new Schema({
@@ -131,10 +131,10 @@ const UserSchema = new Schema({
   const User = mongoose.model('user', UserSchema);
   //User.createIndexes();
   module.exports = User;`
-          },{
-            Logic: "Setting up API CRUD",
-            File: "Routes/Notes.js",
-            Syntax: `const express = require('express');
+      }, {
+        Logic: "Setting up API CRUD",
+        File: "Routes/Notes.js",
+        Syntax: `const express = require('express');
 const router = express.Router();
 const fetchuser = require('../middleware/fetchuser');
 const Note = require('../models/Note');
@@ -242,11 +242,11 @@ router.delete('/deletenote/:id', fetchuser, async (req, res) => {
 })
 
 module.exports = router `
-        },
-        {
-            Logic: "Setting up API CRUD",
-            File: "Routes/Auth.js",
-            Syntax: `const express = require('express');
+      },
+      {
+        Logic: "Setting up API CRUD",
+        File: "Routes/Auth.js",
+        Syntax: `const express = require('express');
 const fetchuser=require('../middleware/fetchuser');
 const router = express.Router();
 const User = require('../models/User');
@@ -381,11 +381,11 @@ router.post('/fetchuser', fetchuser, async (req, res) => {
 
 
 module.exports = router`
-        },
-        {
-            Logic: "Middle Ware used to Auth user using JWT",
-            File: "Middleware/FetchUser.js",
-            Syntax: `var jwt = require('jsonwebtoken');
+      },
+      {
+        Logic: "Middle Ware used to Auth user using JWT",
+        File: "Middleware/FetchUser.js",
+        Syntax: `var jwt = require('jsonwebtoken');
 const Secret = "MyNameIsAdarsh";
 
 const fetchuser = (req, res, next) => {
@@ -410,18 +410,18 @@ const fetchuser = (req, res, next) => {
 
 }
 module.exports = fetchuser`
-        }
-      ]
+      }
+    ]
   }
-    ,{
-        Category: REACT,
-        Concept: "Routes",
-        Img: react,
-        Code: [
-            {
-                Logic: "npm i react-router-dom",
-                File: "App.js",
-                Syntax: `import './App.css';
+  , {
+    Category: REACT,
+    Concept: "Routes",
+    Img: react,
+    Code: [
+      {
+        Logic: "npm i react-router-dom",
+        File: "App.js",
+        Syntax: `import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -442,11 +442,11 @@ const App= ()=> {
 
 
 export default App;`
-            },
-            {
-                Logic: "Need to use <Link/> Tags with <To=page/>",
-                File: "NavBar.js/Consuming Component",
-                Syntax: `import React from 'react'
+      },
+      {
+        Logic: "Need to use <Link/> Tags with <To=page/>",
+        File: "NavBar.js/Consuming Component",
+        Syntax: `import React from 'react'
 import { Link, useLocation ,useNavigate } from 'react-router-dom'
 function Navbar(props) {
 
@@ -468,26 +468,26 @@ function Navbar(props) {
 }
 
 export default Navbar`
-            }
+      }
 
-        ]
-    },
-    {
-      Category: REACT,
-      Concept: "Context API",
-      Img: react,
-      Code: [
-          {
-              Logic: "",
-              File: "NoteContext.js",
-              Syntax: `import  { createContext } from 'react';
+    ]
+  },
+  {
+    Category: REACT,
+    Concept: "Context API",
+    Img: react,
+    Code: [
+      {
+        Logic: "",
+        File: "NoteContext.js",
+        Syntax: `import  { createContext } from 'react';
 const NoteContext = createContext();
 export default NoteContext; `
-          },
-          {
-              Logic: "Creating Context and passing notes and AddNotes as props",
-              File: "NoteState.js",
-              Syntax: `import NoteContext from './NoteContext';
+      },
+      {
+        Logic: "Creating Context and passing notes and AddNotes as props",
+        File: "NoteState.js",
+        Syntax: `import NoteContext from './NoteContext';
 import { useState } from 'react';
 
 const NoteState = (props) => {
@@ -522,10 +522,10 @@ const NoteState = (props) => {
   )
 }
 export default NoteState`
-          },{
-            Logic: "Wrapping note State around children Components",
-            File: "App.js",
-            Syntax: `const App= ()=> {
+      }, {
+        Logic: "Wrapping note State around children Components",
+        File: "App.js",
+        Syntax: `const App= ()=> {
  
   return (
     <NoteState>
@@ -533,10 +533,10 @@ export default NoteState`
     </NoteState>
   );
 }`
-        },{
-          Logic: "Accessing Context State",
-          File: "Noteadd.js",
-          Syntax: `import React, { useContext, useState } from 'react'
+      }, {
+        Logic: "Accessing Context State",
+        File: "Noteadd.js",
+        Syntax: `import React, { useContext, useState } from 'react'
 import NoteContext from '../Context/Notes/NoteContext'
 function Noteadd(props) 
 {
@@ -559,17 +559,17 @@ function Noteadd(props)
 export default Noteadd`
       }
 
-      ]
+    ]
   },
   {
     Category: LOGIC,
     Concept: "Looping List",
     Img: react,
     Code: [
-        {
-            Logic: "Loop through the AlbumID, Get Unique Ids and along with corresponding URLS under it",
-            File: "App.js",
-            Syntax: `
+      {
+        Logic: "Loop through the AlbumID, Get Unique Ids and along with corresponding URLS under it",
+        File: "App.js",
+        Syntax: `
 import './App.css';
 import { useState } from 'react';
 import Album from './Album';
@@ -643,11 +643,11 @@ return (
 }
 
 export default App; `
-        },
-        {
-            Logic: "",
-            File: "Album.js",
-            Syntax: `import { useState } from "react";
+      },
+      {
+        Logic: "",
+        File: "Album.js",
+        Syntax: `import { useState } from "react";
 import List from "./List";
 const Album = (props) => {
 const [showthumb, setshowthumb] = useState(false);
@@ -670,10 +670,10 @@ return (
 };
 
 export default Album;`
-        },{
-          Logic: "",
-          File: "List.js",
-          Syntax: `import React from "react";
+      }, {
+        Logic: "",
+        File: "List.js",
+        Syntax: `import React from "react";
 
 const List = (props) => {
 
@@ -693,7 +693,7 @@ return (
 };
 
 export default List;`
-      },{
+      }, {
         Logic: "Example JSON",
         File: "https://jsonplaceholder.typicode.com/photos",
         Syntax: `[{
@@ -710,18 +710,18 @@ export default List;`
   "url": "https://via.placeholder.com/600/8e973b",
   "thumbnailUrl": "https://via.placeholder.com/150/8e973b"
 }]`
-    }
+      }
 
     ]
-},{
-  Category: REACT,
-  Concept: "Fetch API call in Useffect()",
-  Img: react,
-  Code: [
+  }, {
+    Category: REACT,
+    Concept: "Fetch API call in Useffect()",
+    Img: react,
+    Code: [
       {
-          Logic: "Api call in useEffect Hook, on Component Mount",
-          File: "App.js",
-          Syntax: ` useEffect(() => {
+        Logic: "Api call in useEffect Hook, on Component Mount",
+        File: "App.js",
+        Syntax: ` useEffect(() => {
     FetchCoins();
   }, []);
   //APi call
@@ -743,20 +743,814 @@ export default List;`
       .catch((err) => console.error(err));
   };`
       }
-  ]
-},{
-  Category: "GITHUB",
-  Concept: "PR cant be created, as NO files to compare",
-  Img: React,
-  Code: [
+    ]
+  }, {
+    Category: "GITHUB",
+    Concept: "PR cant be created, as NO files to compare",
+    Img: React,
+    Code: [
       {
-          Logic: "Merging Master to Main, when PR can not be raised",
-          File: "CMD",
-          Syntax: `git checkout master
+        Logic: "Merging Master to Main, when PR can not be raised",
+        File: "CMD",
+        Syntax: `git checkout master
 git branch main master -f
 git checkout main
 git push origin main -f`
       }
-  ]
+    ]
+  },
+  {
+    Category: "Java Script",
+    Concept: "ES6 Concepts",
+    Img: React,
+    Code: [
+      {
+        Logic: "",
+        File: "main.js",
+        Syntax: `function getName(name) {
+  return name;
 }
+
+let a = false;
+let b = false;
+
+console.log(a || getName("Sangam Mukherjee"));
+
+//Template literals
+
+let name1 = "John";
+let name2 = "Doe";
+
+console.log(name1 + " " + name2,{name1} {name2});
+
+//Ternary operator
+
+const showRecipeOne = false;
+
+function getRecipeOneName(recipeName) {
+  return recipeName;
+}
+
+function getRecipeTwoName(recipeName) {
+  return recipeName;
+}
+
+if (showRecipeOne) {
+  console.log(getRecipeOneName("Pizza"));
+} else {
+  console.log(getRecipeTwoName("Coke"));
+}
+
+showRecipeOne
+  ? console.log(getRecipeOneName("Pizza"))
+  : console.log(getRecipeTwoName("Coke"));
+
+const id = 1;
+const productName = "Product Apple Watch";
+const rating = 5;
+
+const product = {
+  id,
+  productName,
+  rating,
+};
+
+console.log(product);
+
+const product2 = {
+  description: "Product 2 description",
+  id,
+  productName,
+  rating,
+};
+
+// const getProductTwoDescription = product2.description;
+
+// console.log(getProductTwoDescription);
+
+const { description } = product2;
+
+console.log(description);
+
+const array = [1, 2, 3, 4];
+
+let getArrayFirstValue = array[0];
+let getArraySecondValue = array[1];
+
+console.log(getArrayFirstValue, getArraySecondValue);
+
+const [
+  arrayFirstElement,
+  arraySecondElement,
+  arrayThirdElement,
+  arrayFourthElement,
+] = array;
+
+console.log(
+  arrayFirstElement,
+  arraySecondElement,
+  arrayThirdElement,
+  arrayFourthElement
+);
+
+//default parameters, spread and rest operators
+
+function mulOfTwoNumbers(num1 = 1, num2 = 2) {
+  console.log(num1, num2);
+  return num1 * num2;
+}
+
+console.log(mulOfTwoNumbers(10));
+
+const array2 = [2, 3, 4];
+const array3 = [10, 11, 12];
+
+console.log([999, ...array2, 90, ...array3, 10000]);
+
+function getInfo(a, ...c) {
+  console.log(a, c);
+
+  //
+
+  return "Sangam Mukherjee";
+}
+
+console.log(getInfo(1, 2, 3, 4, 5, 5, 6, 6, 7, 4, 2, 2, 2));
+
+//map, filter, find, some, every, includes, indexOf, findIndex
+
+const personsArray = [
+  {
+    name: "Person 01",
+    age: 45,
+    country: "USA",
+  },
+  {
+    name: "Person 1",
+    age: 30,
+    country: "USA",
+  },
+  {
+    name: "Person 2",
+    age: 40,
+    country: "RUSSIA",
+  },
+  {
+    name: "Person 3",
+    age: 50,
+    country: "INDIA",
+  },
+];
+
+let getAllNames = personsArray.map((singlePerson, index) => {
+  console.log(singlePerson, index);
+  return {singlePerson.name} age is {singlePerson.age};
+});
+
+console.log(getAllNames);
+
+let getPersonFromUSA = personsArray.find((singlePerson, index) => {
+  return singlePerson.country === "USA";
+});
+
+console.log(getPersonFromUSA);
+
+let getAllPersonsFromUSA = personsArray.filter((singlePerson, index) => {
+  return singlePerson.country === "USA";
+});
+
+console.log(getAllPersonsFromUSA);
+
+let checkSomeArrayMethodWithExample = personsArray.some((singlePerson) => {
+  return singlePerson.age > 40;
+});
+
+console.log(checkSomeArrayMethodWithExample);
+
+let checkEveryArrayMethodWithExample = personsArray.every((singlePerson) => {
+  return singlePerson.age > 25;
+});
+
+console.log(checkEveryArrayMethodWithExample);
+
+const fruitsArray = ["apple", "banana", "orange"];
+
+console.log(fruitsArray.includes("sangam"), fruitsArray.indexOf("sangam"));
+
+let getIndexOfPersonWhoISFromRussia = personsArray.findIndex((singlePerson) => {
+  return singlePerson.country === "JAPAN";
+});
+
+console.log(getIndexOfPersonWhoISFromRussia);
+
+let getListOfproductsElement = document.querySelector(".list-of-products");
+
+function renderProducts(getProducts) {
+  getListOfproductsElement.innerHTML = getProducts
+    .map((singleProductItem) => <p>{singleProductItem.title}</p>)
+    .join(" ");
+}
+
+async function fetchListOfProducts() {
+  try {
+    const apiResponse = await fetch("https://dummyjson.com/products", {
+      method: "GET",
+    });
+
+    const result = await apiResponse.json();
+
+    console.log(result);
+
+    if (result?.products?.length > 0) renderProducts(result?.products);
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+fetchListOfProducts();`
+      }
+    ]
+  }, {
+    Category: React,
+    Concept: "CSS Responsive",
+    Img: react,
+    Code: [
+      {
+        Logic: "",
+        File: "App.css",
+        Syntax: `
+
+/* Desktop container utility class: */
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+
+  @media (max-width: 300px) {
+    .container {
+      width: 100%;
+    }
+
+    @media (max-width: 100px) {
+      .container {
+        width: 100%;
+      }
+  }}}
+
+  
+
+
+/* Mobile container utility class:*/
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+ @media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+} 
+
+/* sm */
+ @media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+} 
+
+/* md */
+ @media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+} 
+
+/* lg */
+ @media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+} 
+
+/* xl */
+ @media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+} 
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}  `
+      }
+    ]
+  }, {
+    Category: REACT,
+    Concept: "Window Dimension Monitoring",
+    Img: react,
+    Code: [
+      {
+        Logic: "",
+        File: "Dimension.jsx",
+        Syntax: `import React, { useState, createRef } from 'react'
+
+const useRefDimensions = (ref) => {
+  const [dimensions, setDimensions] = useState({ width: 1, height: 2 })
+  React.useEffect(() => {
+    if (ref.current) {
+      const { current } = ref
+      const boundingRect = current.getBoundingClientRect()
+      const { width, height } = boundingRect
+      setDimensions({ width: Math.round(width), height: Math.round(height) })
+    }
+  }, [ref])
+  return dimensions
+}
+
+export default function Dimension() {
+  const divRef = createRef()
+  const dimensions = useRefDimensions(divRef)
+
+  return (
+    <div >
+      <div
+        ref={divRef}
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+    {dimensions.width}w {dimensions.height}h
+      </div>
+    </div>
+  )
+}`
+      }
+    ]
+  },
+  {
+    Category: REACT,
+    Concept: "Showing Alert",
+    Img: react,
+    Code: [
+      {
+        Logic: "Creating Alert Component",
+        File: "Alert.jsx",
+        Syntax: `import React from 'react'
+function Alert(props) {
+  return (
+    <div>
+      <div className={"alert alert-"$"{props.alert.type}"} role="alert">
+       {props.alert.message}
+     </div>
+    </div>
+  )
+}
+
+export default Alert`
+      }, {
+        Logic: "Calling at entry point",
+        File: "App.js",
+        Syntax: `import './App.css';
+import Navbar from './Components/Navbar'
+import Alert from './Components/Alert';
+import { useState } from 'react';
+
+
+const App= ()=> {
+  const [alert,setAlert]=useState(null);
+  console.log(alert)
+  const showAlert=(m,t)=>{
+    setAlert({message:m,type:t});
+    console.log(alert)
+    setTimeout(()=>{
+      setAlert(null);
+    },2000)
+  }
+
+
+
+  return (
+        <Navbar showAlert={showAlert} />
+        {alert && <Alert alert={alert}/> }
+  );
+}
+
+export default App;`
+      }, {
+        Logic: "Calling Show ALlert",
+        File: "NavBar.jsx",
+        Syntax: `import React from 'react'
+import { Link  } from 'react-router-dom'
+
+
+function Navbar(props) 
+{
+let navigate=useNavigate();
+const handleLogout = () => {
+props.showAlert(localStorage.getItem("user")+" Logged out" ,"success");
+}
+
+return (
+<div>
+<div className="d-flex">
+      <Link type="button" className="btn btn-outline-primary align" to="/login">Log in</Link>
+      <Link type="button" className="btn btn-outline-success mx-3" to="/signup" >Sign up</Link>
+ <button className="btn btn-outline-danger mx-4" onClick={handleLogout}>Log Out</button></div>
+</div>
+)
+}
+
+export default Navbar`
+      }
+    ]
+  }, {
+    Category: REACT,
+    Concept: "UseNavigate,UseRef,Local Storage",
+    Img: react,
+    Code: [
+      {
+        Logic: "Use to Navgate to some home page",
+        File: "Notes.jsx",
+        Syntax: `import {useNavigate } from 'react-router-dom;'
+        let navigate=useNavigate();
+        navigate("/home");`
+      },
+      {
+        Logic: "Set And Remove from localStorage",
+        File: "Notes.jsx",
+        Syntax: `localStorage.setItem("user", json.user);'
+          localStorage.removeItem("user");`
+      },
+      {
+        Logic: "UseRef",
+        File: "Notes.jsx",
+        Syntax: `import React, { useContext, useEffect, useState,useRef } from 'react'
+import Noteitem from './Noteitem';
+import Noteadd from './Noteadd';
+function Notes(props) {
+    const [note, setNote] = useState({ title: "", description: "", tag: "" ,id:""});
+    const ref=useRef(null);
+    const update =(note) =>
+    {
+        ref.current.click();
+    }
+
+    return (
+        <div className='row md-4'>
+            <div className="container">
+                <Noteadd showAlert={props.showAlert}  />
+            </div>
+            <div className="container">
+                <button type="button" ref={ref} className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Launch static backdrop modal
+                </button>
+            </div>
+            <Noteitem key={note._id} note={note} update={update} showAlert={props.showAlert} ></Noteitem>
+        </div>
+    )
+}
+
+export default Notes`
+      }
+    ]
+  },{
+    Category: REACT,
+    Concept: "Real Time Setting State from Input fields",
+    Img: react,
+    Code: [
+        {
+            Logic: "Real Time Setting State from Input fields",
+            File: "Note.jsx",
+            Syntax: `
+import React, { useContext, useState } from 'react'
+import NoteContext from '../Context/Notes/NoteContext'
+function Noteadd(props) {
+const { AddNote } = useContext(NoteContext);
+const [note, setNote] = useState({ title: "", description: "", tag: "" });
+const handleOnClick = () => {
+    AddNote(note.title, note.description, note.tag);
+    props.showAlert("Added Note successfully" ,"success");
+}
+const handleOnClickReset = (e) => {
+    setNote({ title: "", description: "", tag: "" });
+}
+
+const onChange = (e) => {
+    setNote({ ...note, [e.target.name]: e.target.value });
+   
+    console.log( localStorage.getItem("token"));
+}
+
+return (
+    <div className="container my-3">
+        <h2>Add Notes</h2>
+        <form className="my-3">
+            <div className="row mb-3">
+                <label htmlFor="title" className="col-sm-2 col-form-label">Title</label>
+                <div className="col-sm-3">
+                    <input type="text" className="form-control" name="title" onChange={onChange} value={note.title} id="inputTitle" />
+                </div>
+            </div>
+            <div className="row mb-3">
+                <label htmlFor="description" className="col-sm-2 col-form-label">Description</label>
+                <div className="col-sm-3">
+                    <input type="text" className="form-control" name="description" onChange={onChange} value={note.description} id="inputDesc" />
+                </div>
+            </div>
+            <div className="row mb-3">
+                <label htmlFor="tag" className="col-sm-2 col-form-label">Tag</label>
+                <div className="col-sm-3">
+                    <input type="text" className="form-control" onChange={onChange} name="tag" value={note.tag} id="inputTag" />
+                </div>
+            </div>
+            <button disabled={note.description.length<5 ||note.title.length<5} type="button" className="btn btn-info" onClick={handleOnClick}>Add Note</button>
+            <button disabled={note.description.length<5 ||note.title.length<5} type="button" className="btn btn-info mx-3" onClick={handleOnClickReset}>Reset</button>
+        </form>
+    </div>
+)
+}
+
+export default Noteadd
+`
+        }
+    ]
+},
+{
+  Category: REACT,
+  Concept: "Express API and Consuming CRUD",
+  Img: react,
+  Code: [
+      {
+          Logic: "Creating CRUD operation",
+          File: "Backend/notes.js",
+          Syntax: `const express = require('express');
+const router = express.Router();
+const fetchuser = require('../middleware/fetchuser');
+const Note = require('../models/Note');
+const { body, validationResult } = require('express-validator');
+
+
+//ENDPOINT -/api/notes/fetchNotes
+router.get('/fetchnotes', fetchuser, async (req, res) => {
+
+try {
+  const userid = req.user.id;
+  const note = await Note.find({ user: userid });
+  res.json(note);
+
+} catch (error) {
+  res.status(500).json({ error: "Some Error occured!" });
+}
+
+})
+
+
+//ENDPOINT -/api/notes/addnotes
+router.post('/addnotes', fetchuser, [
+body('title', 'title length should be more than and equal to 2').isLength({ min: 2 }),
+body('description', 'description length should be more than and equal to 2').isLength({ min: 2 }),
+
+], async (req, res) => {
+
+
+const result = validationResult(req);
+if (!result.isEmpty()) {
+  return res.status(400).json({ errors: result.array() });
+}
+
+try {
+
+  const { title, description, tag } = req.body;
+  const note = new Note({
+
+      title, description, tag, user: req.user.id
+
+  })
+  note.save();
+  
+  res.json({success : true,note:note});
+
+
+} catch (error) {
+  res.status(500).json({ error: "Some Error occured!" });
+}
+
+})
+
+
+
+//ENDPOINT -/api/notes/updatenote
+router.put('/updatenote/:id', fetchuser, async (req, res) => {
+
+
+const { title, description, tag } = req.body
+const newNote = {};
+if (title) { newNote.title = title }
+if (description) { newNote.description = description }
+if (tag) { newNote.tag = tag }
+
+try {
+
+
+  let note = await Note.findById(req.params.id);
+  if (!note) {
+      return res.status(401).json({success : false, error: "Note Not Found!" });
+  }
+
+  if (note.user.toString() != req.user.id) {
+      return res.status(401).json({success : false, error: "Not Allowed" });
+  }
+
+  note = await Note.findByIdAndUpdate(req.params.id, { $set: newNote }, { new: true });
+  res.json({ success : true,note });
+} catch (error) {
+  res.status(500).json({ error: "Some Error occured!" });
+}
+})
+
+//ENDPOINT -/api/notes/deletenote
+router.delete('/deletenote/:id', fetchuser, async (req, res) => {
+
+try {
+
+
+  let note = await Note.findById(req.params.id);
+  if (!note) {
+      return res.status(401).json({ success : false,error: "Note Not Found!" });
+  }
+
+  if (note.user.toString() != req.user.id) {
+      return res.status(401).json({ success : false,serror: "Not Allowed" });
+  }
+
+  note = await Note.findByIdAndDelete(req.params.id);
+  res.json({success : true, note:note });
+} catch (error) {
+  res.status(500).json({ error: "Some Error occured!" });
+}
+})
+
+module.exports = router `
+      }
+  ]
+},
+{
+  Logic: "ADD",
+  File: "NoteContext.js",
+  Syntax: ` //ADD NOTE
+const AddNote =async (title, description, tag) => {
+
+const response = await fetch("$"{host}/api/notes/addnotes, {
+method: 'post',
+headers: {
+  "auth-token":localStorage.getItem("token"),
+  "Content-Type" : "application/json"
+},
+body:JSON.stringify({title, description, tag})
+});
+
+const json=await response.json();
+console.log(json.errors);
+
+if(!json.errors)
+{
+setNote(notes.concat(json.note));
+}
+}`
+}, {
+  Logic: "UPDATE",
+  File: "NoteContext.js",
+  Syntax: `//Update NOTE
+const UpdateNote =async (title, description, tag,id) => {
+
+const response = await fetch("$"{host}/api/notes/updatenote/"$"{id}, {
+method: 'put',
+headers: {
+ "auth-token": localStorage.getItem("token"),
+ "Content-Type" : "application/json"
+},
+body:JSON.stringify({title, description, tag})
+});
+
+const json=await response.json();
+
+
+if(!json.errors)
+{
+const updatedNote=JSON.parse(JSON.stringify(notes))
+for (let index = 0; index < updatedNote.length; index++) {
+
+if(updatedNote[index]._id===id){
+  updatedNote[index].title=title;
+  updatedNote[index].description=description;
+  updatedNote[index].tag=tag;
+
+}
+}
+//Cleint update
+setNote(updatedNote);
+}
+}`
+}, {
+  Logic: "DELETE",
+  File: "NoteContext.js",
+  Syntax: ` //DELETE NOTE
+const DeleteNote =async (id) => {
+//API call
+const response = await fetch("$"{host}/api/notes/deletenote/"$"{id, {
+method: 'delete',
+headers: {
+  "auth-token": localStorage.getItem("token"),
+}
+});
+//Client Update
+const newNote = notes.filter((e) => { return e._id !== id });
+setNote((newNote));
+}
+`
+}
+, {
+  Logic: "Calling API via Context",
+  File: "Note.jsx",
+  Syntax: ` import React, { useContext, useState } from 'react'
+import NoteContext from '../Context/Notes/NoteContext'
+function Noteadd(props) {
+const { AddNote } = useContext(NoteContext);
+const [note, setNote] = useState({ title: "", description: "", tag: "" });
+const handleOnClick = () => {
+  AddNote(note.title, note.description, note.tag);
+ 
+}
+
+const {DeleteNote} = useContext(NoteContext);
+const {note,update,showAlert} = props;
+const handleDelete=(id)=>
+{
+  DeleteNote(id);
+ 
+}
+return (
+  <></>      
+)
+}
+
+export default Noteadd
+`
+}
+
 ]
