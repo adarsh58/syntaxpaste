@@ -25,7 +25,7 @@ align-items: center;
   border-radius:2px;
   border-left: 2px solid #f5f5f7;
   border-bottom: 2px solid #f5f5f7;
-  border-right: 1px solid #adc0bc;
+  border-right: 1px solid #adb2c0;
   border-top: 1px solid #f4f4f6;
 
   box-shadow: 0 0 2px 0 #f4f4f6 inset,
@@ -34,9 +34,9 @@ align-items: center;
     -5em 1em 30em 1em rgba(255,255,255,.2),
     0em 2px 0 rgba(255,255,255,.7),
     0em 10px 50px -10px rgba(255,255,255,1),
-    1.2em -0.8em 2em 0em #044134,
-    5.5em -1em 50em 0em #044134,
-    0px -5px 25px 0px #808f8c;
+    1.2em -0.8em 2em 0em #041f41,
+    5.5em -1em 50em 0em #041c41,
+    0px -5px 25px 0px #80828f;
   
   -webkit-transition: all .5s ease;
      -moz-transition: all .5s ease;

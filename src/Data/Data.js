@@ -971,7 +971,7 @@ fetchListOfProducts();`
       }
     ]
   }, {
-    Category: React,
+    Category: REACT,
     Concept: "CSS Responsive",
     Img: react,
     Code: [
@@ -1416,7 +1416,7 @@ try {
       return res.status(401).json({success : false, error: "Not Allowed" });
   }
 
-  note = await Note.findByIdAndUpdate(req.params.id, { $set: newNote }, { new: true });
+  note = await Note.findByIdAndUpdate(req.params.id, { "$"set: newNote }, { new: true });
   res.json({ success : true,note });
 } catch (error) {
   res.status(500).json({ error: "Some Error occured!" });
@@ -1447,8 +1447,7 @@ try {
 
 module.exports = router `
       }
-  ]
-},
+ ,
 {
   Logic: "ADD",
   File: "NoteContext.js",
@@ -1552,5 +1551,6 @@ return (
 export default Noteadd
 `
 }
-
+  ]
+}
 ]
