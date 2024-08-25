@@ -1,10 +1,12 @@
 import react from './React.png'
 import MongoD from './MongoD.png'
+import React from 'react';
 const kittenHeader = require('./React.png')
 const Mongo = require('./MongoD.png')
 
 const REACT="ReactJs";
 const MongoDB="MongoDB";
+const EXPRESS="ExpressJs";
 const LOGIC="Logic"
 
 export const Data = [
@@ -35,8 +37,383 @@ connectToMongo(); `
             }
 
         ]
+    }
+    ,{
+      Category: EXPRESS,
+      Concept: "Setting up API's",
+      Img: Mongo,
+      Code: [
+          {
+              Logic: "Setting API endpoint and Express Initialization,Please Run these NPM "
++'\nnpm i bcrypt\n'
++'\nnpm i express\n'
++'\nnpm i mongoose\n'
++'npm install -g nodemon'
++'npm i express-validator'
++'npm install cors'
++'npm run start',
+              File: "Index.js",
+              Syntax: `const connectToMongo = require('./db');
+const express = require('express')
+var cors = require('cors')
+connectToMongo();
+
+const app = express()
+const port = 5000
+app.use(express.json());
+app.use(cors())
+app.use('/api/auth', require('./routes/auth'))
+app.use('/api/notes', require('./routes/notes'))
+
+
+app.listen(port, () => {
+  console.log(Example app listening on port {port})
+})`
+          },
+          {
+              Logic: "Model ",
+              File: "Note.js",
+              Syntax: `
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const NotesSchema = new Schema({
+    user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'user'
     },
-    {
+    title:{
+        type: String,
+        required: true
+    },
+    description:{
+        type: String,
+        required: true, 
+    },
+    tag:{
+        type: String,
+        default: "General"
+    },
+    date:{
+        type: Date,
+        default: Date.now
+    },
+  });
+
+  module.exports = mongoose.model('note', NotesSchema);
+`
+          },
+          {
+              Logic: "Model",
+              File: "User.js",
+              Syntax: `const mongoose = require('mongoose');
+const { Schema } = mongoose;
+
+const UserSchema = new Schema({
+    name:{
+        type: String,
+        required: true
+    },
+    email:{
+        type: String,
+        required: true,
+        unique: true
+    },
+    password:{
+        type: String,
+        required: true
+    },
+    date:{
+        type: Date,
+        default: Date.now
+    },
+  });
+  const User = mongoose.model('user', UserSchema);
+  //User.createIndexes();
+  module.exports = User;`
+          },{
+            Logic: "Setting up API CRUD",
+            File: "Routes/Notes.js",
+            Syntax: `const express = require('express');
+const router = express.Router();
+const fetchuser = require('../middleware/fetchuser');
+const Note = require('../models/Note');
+const { body, validationResult } = require('express-validator');
+
+
+//ENDPOINT -/api/notes/fetchNotes
+router.get('/fetchnotes', fetchuser, async (req, res) => {
+
+    try {
+        const userid = req.user.id;
+        const note = await Note.find({ user: userid });
+        res.json(note);
+
+    } catch (error) {
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+
+})
+
+
+//ENDPOINT -/api/notes/addnotes
+router.post('/addnotes', fetchuser, [
+    body('title', 'title length should be more than and equal to 2').isLength({ min: 2 }),
+    body('description', 'description length should be more than and equal to 2').isLength({ min: 2 }),
+
+], async (req, res) => {
+
+   
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+        return res.status(400).json({ errors: result.array() });
+    }
+
+    try {
+
+        const { title, description, tag } = req.body;
+        const note = new Note({
+
+            title, description, tag, user: req.user.id
+
+        })
+        note.save();
+        
+        res.json({success : true,note:note});
+
+
+    } catch (error) {
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+
+})
+
+
+
+//ENDPOINT -/api/notes/updatenote
+router.put('/updatenote/:id', fetchuser, async (req, res) => {
+
+
+    const { title, description, tag } = req.body
+    const newNote = {};
+    if (title) { newNote.title = title }
+    if (description) { newNote.description = description }
+    if (tag) { newNote.tag = tag }
+
+    try {
+
+
+        let note = await Note.findById(req.params.id);
+        if (!note) {
+            return res.status(401).json({success : false, error: "Note Not Found!" });
+        }
+
+        if (note.user.toString() != req.user.id) {
+            return res.status(401).json({success : false, error: "Not Allowed" });
+        }
+
+        note = await Note.findByIdAndUpdate(req.params.id, { $set: newNote }, { new: true });
+        res.json({ success : true,note });
+    } catch (error) {
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+})
+
+//ENDPOINT -/api/notes/deletenote
+router.delete('/deletenote/:id', fetchuser, async (req, res) => {
+
+    try {
+
+
+        let note = await Note.findById(req.params.id);
+        if (!note) {
+            return res.status(401).json({ success : false,error: "Note Not Found!" });
+        }
+
+        if (note.user.toString() != req.user.id) {
+            return res.status(401).json({ success : false,serror: "Not Allowed" });
+        }
+
+        note = await Note.findByIdAndDelete(req.params.id);
+        res.json({success : true, note:note });
+    } catch (error) {
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+})
+
+module.exports = router `
+        },
+        {
+            Logic: "Setting up API CRUD",
+            File: "Routes/Auth.js",
+            Syntax: `const express = require('express');
+const fetchuser=require('../middleware/fetchuser');
+const router = express.Router();
+const User = require('../models/User');
+const { body, validationResult } = require('express-validator');
+const Secret = "MyNameIsAdarsh";
+var jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+
+// TESTING API -http://localhost:5000/api/auth/
+router.get('/', async (req, res) => {
+    res.send("API IS UP And running");
+})
+
+
+//For creating new user, no AUth req - email should be unique.
+//EP -/api/auth/CreateUser
+router.post('/CreateUser', [
+    body('password', 'Password length should be more than and equal to 5').isLength({ min: 5 }),
+    body('email', 'Email is not in valid format').isEmail(),
+    body('name', 'Name should not be empty').notEmpty()
+], async (req, res) => {
+    //checking the validation we have passed as an arraya above
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+        return res.status(400).json({ errors: result.array() });
+    }
+
+    try {
+        //checking DB if user Exists
+        let user = await User.findOne({ email: req.body.email });
+
+        if (user) {
+            res.status(500).json({success : false, message: "Sorry Email already exists!" });
+        }
+        else {
+
+            //Generating Password+salt
+            const salt = bcrypt.genSaltSync(10);
+            const secPassword = await bcrypt.hash(req.body.password, salt);
+            //Adding user to DB
+            user = await User.create({
+                name: req.body.name,
+                email: req.body.email,
+                password: secPassword,
+            });
+            //gen JWT
+            const data = {
+                user: { id: user._id }
+            }
+            const token = jwt.sign(data, Secret);
+            //Sending back the JWT to client
+            res.status(200).json({success : true, message: "User added successfully!" ,token});
+           // res.send(token);
+        }
+
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+
+})
+
+
+//EP -/api/auth/Login
+router.post('/Login', [
+    body('password', 'Password length should be more than and equal to 5').exists(),
+    body('email', 'Name should not be empty').isEmail()
+], async (req, res) => {
+    //checking the validation we have passed as an arraya above
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+        return res.status(400).json({ error: "Please try again with correct credentials!" });
+    }
+
+    try {
+        //checking DB if user Exists
+        //Destructuring
+
+        const { email, password } = req.body;
+
+        const user = await User.findOne({ email: email });
+
+        if (user) {
+            const match = await bcrypt.compare(password, user.password);
+            if (match) {
+                //gen JWT
+                const data = {
+                    user: { id: user._id }
+                }
+                const token = jwt.sign(data, Secret);
+                //Sending back the JWT to client
+              
+                res.status(200).json({success : true, message: "valid User",token,user:user.name });
+                
+            }
+            else {
+                res.status(500).json({success : false, message: "Invalid Credentials." });
+            }
+        }
+        else {
+    
+            res.status(500).json({success : false, message: "User not found" });
+        }
+
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+
+})
+
+//EP -/api/auth/fetchuser
+router.post('/fetchuser', fetchuser, async (req, res) => {
+
+    try {
+        
+        const userid=req.user.id;
+        const user=await User.findById(userid).select('-password');  
+        res.status(200).json({ success:true,message:"User Fetched successfully!",user:user });
+       
+
+    } catch (error) {
+        res.status(500).json({ error: "Some Error occured!" });
+    }
+
+})
+
+
+
+
+
+
+
+module.exports = router`
+        },
+        {
+            Logic: "Middle Ware used to Auth user using JWT",
+            File: "Middleware/FetchUser.js",
+            Syntax: `var jwt = require('jsonwebtoken');
+const Secret = "MyNameIsAdarsh";
+
+const fetchuser = (req, res, next) => {
+    
+    const header = req.header('auth-token');
+    console.error(header);
+    if (!header) {   
+        res.status(401).json({ error: "Invalid Token" });
+
+    }
+    try {
+       
+        const data=jwt.verify(header,Secret);    
+        req.user=data.user;
+        next();
+        
+    } catch (error) {
+        
+        res.status(500).json({ error: "Error occured while authorization" });
+    }
+
+
+}
+module.exports = fetchuser`
+        }
+      ]
+  }
+    ,{
         Category: REACT,
         Concept: "Routes",
         Img: react,
@@ -336,5 +713,50 @@ export default List;`
     }
 
     ]
+},{
+  Category: REACT,
+  Concept: "Fetch API call in Useffect()",
+  Img: react,
+  Code: [
+      {
+          Logic: "Api call in useEffect Hook, on Component Mount",
+          File: "App.js",
+          Syntax: ` useEffect(() => {
+    FetchCoins();
+  }, []);
+  //APi call
+  const FetchCoins = () => {
+    const options = {
+      method: "GET",
+      headers: {
+        accept: "application/json",
+        "X-API-KEY": "7Sx4RHCG1F2bdtLS/bnC1trru4ZHddrAaGaIdTe1YfI=",
+      },
+    };
+
+    fetch("https://openapiv1.coinstats.app/coins?limit=5", options)
+      .then((response) => response.json())
+      .then((response) => {
+        setCoins(response);
+        setLoading(false);
+      })
+      .catch((err) => console.error(err));
+  };`
+      }
+  ]
+},{
+  Category: "GITHUB",
+  Concept: "PR cant be created, as NO files to compare",
+  Img: React,
+  Code: [
+      {
+          Logic: "Merging Master to Main, when PR can not be raised",
+          File: "CMD",
+          Syntax: `git checkout master
+git branch main master -f
+git checkout main
+git push origin main -f`
+      }
+  ]
 }
 ]
