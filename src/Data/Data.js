@@ -1552,5 +1552,61 @@ export default Noteadd
 `
 }
   ]
+},
+ {
+        Category: REACT,
+        Concept: "Custom fetch hook",
+        Img: react,
+        Code: [
+            {
+                Logic: "Creating fetch api hook",
+                File: "use-fetch.js",
+                Syntax: `import { useEffect } from "react";
+import { useState } from "react";
+
+function useFetch(url, options = {}) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  async function fetchData() {
+    setLoading(true);
+    try {
+      const response = await fetch(url, { ...options });
+      if (!response.ok) throw new Error(response.statusText);
+
+      const result = await response.json();
+      if (result) {
+        setData(result);
+        setError(null);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      setError(error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [url]);
+
+  return {
+    data,
+    loading,
+    error,
+  };
+}
+
+export default useFetch; `
+            },{
+            
+                Logic: "Consuming custom fetch api hook",
+                File: "app.js",
+                Syntax: `const { data, loading, error } = useFetch("https://dummyjson.com/recipes"); `
+    }
+        ]
+    
 }
 ]
