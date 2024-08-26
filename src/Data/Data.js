@@ -3,7 +3,7 @@ import Mongo from '../assets/MongoD.png'
 import Express from '../assets/express.png'
 import Js from '../assets/Js.png'
 import Html from '../assets/htmlcss.png'
-
+import Git from '../assets/Git.png'
 
 
 
@@ -748,9 +748,9 @@ export default List;`
       }
     ]
   }, {
-    Category: "GITHUB",
+    Category: "Github",
     Concept: "PR cant be created, as NO files to compare",
-    Img:reactImg,
+    Img:Git,
     Code: [
       {
         Logic: "Merging Master to Main, when PR can not be raised",
