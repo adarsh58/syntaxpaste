@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import CopyCode from "../../CopySyntax/CodePlayGround/CopyCode";
 import "./CodeModal.css";
-
+import SendIcon from '@mui/icons-material/Send';
 const style = {
   position: "absolute",
   top: "50%",
@@ -25,7 +25,7 @@ export default function CodeModal(props) {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Click me</Button>
+      <Button variant="outlined" endIcon={<SendIcon />} className="ModalOpenBtn" onClick={handleOpen}>Click me</Button>
       <Modal
         open={open}
         onClose={handleClose}

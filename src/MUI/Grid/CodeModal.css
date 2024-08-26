@@ -23,3 +23,14 @@
         height:70%!important;
     }
 }
+
+.ModalOpenBtn
+{
+    /* background: blue !important;
+    color: wheat !important; */
+}
+
+.ModalOpenBtn:hover{
+   
+            transform: translateY(-5px);
+  }

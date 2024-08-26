@@ -6,6 +6,7 @@ npm install @fontsource/roboto
 npm i react-simple-code-editor
 npm i prismjs
 npm i react-router-dom
+npm install @mui/icons-material
 
 
 
