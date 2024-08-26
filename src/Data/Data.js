@@ -1,8 +1,6 @@
-import react from './React.png'
-import MongoD from './MongoD.png'
-import React from 'react';
-const kittenHeader = require('./React.png')
-const Mongo = require('./MongoD.png')
+import reactImg from '../assets/reactnew.png'
+import mongoDBImg from '../assets/MongoD.png'
+
 
 const REACT = "ReactJs";
 const MongoDB = "MongoDB";
@@ -13,7 +11,7 @@ export const Data = [
   {
     Category: MongoDB,
     Concept: "Setup Connection",
-    Img: Mongo,
+    Img: mongoDBImg,
     Code: [
       {
         Logic: "npm install -g nodemon and To run package nodemon ./index.js",
@@ -41,7 +39,7 @@ connectToMongo(); `
   , {
     Category: EXPRESS,
     Concept: "Setting up API's",
-    Img: Mongo,
+    Img: mongoDBImg,
     Code: [
       {
         Logic: "Setting API endpoint and Express Initialization,Please Run these NPM "
@@ -416,7 +414,7 @@ module.exports = fetchuser`
   , {
     Category: REACT,
     Concept: "Routes",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "npm i react-router-dom",
@@ -475,7 +473,7 @@ export default Navbar`
   {
     Category: REACT,
     Concept: "Context API",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "",
@@ -564,7 +562,7 @@ export default Noteadd`
   {
     Category: LOGIC,
     Concept: "Looping List",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "Loop through the AlbumID, Get Unique Ids and along with corresponding URLS under it",
@@ -716,7 +714,7 @@ export default List;`
   }, {
     Category: REACT,
     Concept: "Fetch API call in Useffect()",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "Api call in useEffect Hook, on Component Mount",
@@ -747,7 +745,7 @@ export default List;`
   }, {
     Category: "GITHUB",
     Concept: "PR cant be created, as NO files to compare",
-    Img: React,
+    Img:reactImg,
     Code: [
       {
         Logic: "Merging Master to Main, when PR can not be raised",
@@ -762,7 +760,7 @@ git push origin main -f`
   {
     Category: "Java Script",
     Concept: "ES6 Concepts",
-    Img: React,
+    Img:reactImg,
     Code: [
       {
         Logic: "",
@@ -973,7 +971,7 @@ fetchListOfProducts();`
   }, {
     Category: REACT,
     Concept: "CSS Responsive",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "",
@@ -1100,7 +1098,7 @@ fetchListOfProducts();`
   }, {
     Category: REACT,
     Concept: "Window Dimension Monitoring",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "",
@@ -1145,7 +1143,7 @@ export default function Dimension() {
   {
     Category: REACT,
     Concept: "Showing Alert",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "Creating Alert Component",
@@ -1221,7 +1219,7 @@ export default Navbar`
   }, {
     Category: REACT,
     Concept: "UseNavigate,UseRef,Local Storage",
-    Img: react,
+    Img:reactImg,
     Code: [
       {
         Logic: "Use to Navgate to some home page",
@@ -1271,7 +1269,7 @@ export default Notes`
   },{
     Category: REACT,
     Concept: "Real Time Setting State from Input fields",
-    Img: react,
+    Img:reactImg,
     Code: [
         {
             Logic: "Real Time Setting State from Input fields",
@@ -1333,7 +1331,7 @@ export default Noteadd
 {
   Category: REACT,
   Concept: "Express API and Consuming CRUD",
-  Img: react,
+  Img:reactImg,
   Code: [
       {
           Logic: "Creating CRUD operation",
@@ -1556,7 +1554,7 @@ export default Noteadd
  {
         Category: REACT,
         Concept: "Custom fetch hook",
-        Img: react,
+        Img:reactImg,
         Code: [
             {
                 Logic: "Creating fetch api hook",

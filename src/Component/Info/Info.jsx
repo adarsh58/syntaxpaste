@@ -1,5 +1,4 @@
 import React from 'react';
-import info2 from '../../Data/info2.png'
 
 const Info = () => {
   return (
