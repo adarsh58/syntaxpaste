@@ -1,7 +1,10 @@
 import reactImg from '../assets/reactnew.png'
 import Mongo from '../assets/MongoD.png'
 import Express from '../assets/express.png'
-import React from 'react';
+import Js from '../assets/Js.png'
+import Html from '../assets/htmlcss.png'
+
+
 
 
 const REACT = "ReactJs";
@@ -564,7 +567,7 @@ export default Noteadd`
   {
     Category: LOGIC,
     Concept: "Looping List",
-    Img:reactImg,
+    Img:Js,
     Code: [
       {
         Logic: "Loop through the AlbumID, Get Unique Ids and along with corresponding URLS under it",
@@ -762,7 +765,7 @@ git push origin main -f`
   {
     Category: "Java Script",
     Concept: "ES6 Concepts",
-    Img:reactImg,
+    Img:Js,
     Code: [
       {
         Logic: "",
@@ -973,7 +976,7 @@ fetchListOfProducts();`
   }, {
     Category: REACT,
     Concept: "CSS Responsive",
-    Img:reactImg,
+    Img:Html,
     Code: [
       {
         Logic: "",
