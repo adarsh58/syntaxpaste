@@ -9,6 +9,7 @@
 .file
 {
     font-size: x-small !important;
+    color: white !important;
 }
 .File-Span
 {
@@ -21,4 +22,5 @@
 .Logic
 {
     font-style: italic;
+    color: white !important;
 }

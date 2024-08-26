@@ -5,17 +5,20 @@
     display:block!important;
     z-index: 1;
     padding: 0%;
+    background: black !important;
+}
+
+.Concept{
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
 }
 .btnClose {
     display: flex;
     justify-content: center;
 }
-.concept{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-}
-  
+ 
   /* xs */
   @media (max-width: 1070px) {
     .css-1wnsr1i  {

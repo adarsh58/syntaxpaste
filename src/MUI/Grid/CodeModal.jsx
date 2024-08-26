@@ -34,8 +34,8 @@ export default function CodeModal(props) {
       >
         <Box sx={style}>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <div className="concept"> {props.concept}</div>
-          </Typography>
+            <div className="Concept"> {props.concept}</div>
+          </Typography>   
           <Typography id="modal-modal-title" variant="h10" component="h4">
             {props.code &&props.code.map((i) => {
               return <CopyCode file={i.File} Logic={i.Logic} code={i.Syntax} />;
