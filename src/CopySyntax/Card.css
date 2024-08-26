@@ -40,3 +40,19 @@
     font-family: 'Times New Roman', Times, serif;
     height: 50%;
 }
+
+ /* sm */
+ @media (max-width: 640px) {
+    .Card  {
+     max-width: 475px;
+     gap:10rem
+   }
+ }
+ 
+ /* xs */
+ @media (max-width: 475px) {
+   .Card  {
+     width: 100%;
+     gap:10rem
+   }
+}
