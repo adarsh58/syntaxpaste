@@ -14,7 +14,8 @@
     display: flex;
     gap:1rem;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-content: center;
     align-items: start;  
     gap: 1rem;
     margin-top: 2rem;
@@ -22,7 +23,8 @@
 
   }
 .CardSyntax{
-
+  width: 10rem;
+  height: 15rem;
   padding: 1rem;
 }
 

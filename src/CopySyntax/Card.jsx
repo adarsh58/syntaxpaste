@@ -6,7 +6,7 @@ const Card = (props) => {
   console.log(props.data)
   return (
     <div className="Card">
-    <img src={react}/>
+    <img src={props.data.Img}/>
     
     <div className="Card-body">
       <h5 className="Card-title">{props.data.Category}</h5>    
