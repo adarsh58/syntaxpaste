@@ -11,7 +11,7 @@ export const Data = [
   {
     Category: MongoDB,
     Concept: "Setup Connection",
-    Img: Mongo,
+    Img: mongoDBImg,
     Code: [
       {
         Logic: "npm install -g nodemon and To run package nodemon ./index.js",
@@ -415,6 +415,7 @@ module.exports = fetchuser`
     Category: REACT,
     Concept: "Routes",
     Img:reactImg,
+    Img:reactImg,
     Code: [
       {
         Logic: "npm i react-router-dom",
@@ -473,6 +474,7 @@ export default Navbar`
   {
     Category: REACT,
     Concept: "Context API",
+    Img:reactImg,
     Img:reactImg,
     Code: [
       {
@@ -562,6 +564,7 @@ export default Noteadd`
   {
     Category: LOGIC,
     Concept: "Looping List",
+    Img:reactImg,
     Img:reactImg,
     Code: [
       {
@@ -715,6 +718,7 @@ export default List;`
     Category: REACT,
     Concept: "Fetch API call in Useffect()",
     Img:reactImg,
+    Img:reactImg,
     Code: [
       {
         Logic: "Api call in useEffect Hook, on Component Mount",
@@ -746,6 +750,7 @@ export default List;`
     Category: "GITHUB",
     Concept: "PR cant be created, as NO files to compare",
     Img:reactImg,
+    Img:reactImg,
     Code: [
       {
         Logic: "Merging Master to Main, when PR can not be raised",
@@ -760,6 +765,7 @@ git push origin main -f`
   {
     Category: "Java Script",
     Concept: "ES6 Concepts",
+    Img:reactImg,
     Img:reactImg,
     Code: [
       {
@@ -972,6 +978,7 @@ fetchListOfProducts();`
     Category: REACT,
     Concept: "CSS Responsive",
     Img:reactImg,
+    Img:reactImg,
     Code: [
       {
         Logic: "",
@@ -1099,6 +1106,7 @@ fetchListOfProducts();`
     Category: REACT,
     Concept: "Window Dimension Monitoring",
     Img:reactImg,
+    Img:reactImg,
     Code: [
       {
         Logic: "",
@@ -1143,6 +1151,7 @@ export default function Dimension() {
   {
     Category: REACT,
     Concept: "Showing Alert",
+    Img:reactImg,
     Img:reactImg,
     Code: [
       {
@@ -1220,6 +1229,7 @@ export default Navbar`
     Category: REACT,
     Concept: "UseNavigate,UseRef,Local Storage",
     Img:reactImg,
+    Img:reactImg,
     Code: [
       {
         Logic: "Use to Navgate to some home page",
@@ -1269,6 +1279,7 @@ export default Notes`
   },{
     Category: REACT,
     Concept: "Real Time Setting State from Input fields",
+    Img:reactImg,
     Img:reactImg,
     Code: [
         {
@@ -1331,6 +1342,7 @@ export default Noteadd
 {
   Category: REACT,
   Concept: "Express API and Consuming CRUD",
+  Img:reactImg,
   Img:reactImg,
   Code: [
       {
@@ -1554,6 +1566,7 @@ export default Noteadd
  {
         Category: REACT,
         Concept: "Custom fetch hook",
+        Img:reactImg,
         Img:reactImg,
         Code: [
             {

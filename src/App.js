@@ -3,10 +3,9 @@ import './App.css';
 import Heading from './Component/Home/Heading';
 import Info from './Component/Info/Info';
 import NavBar from './Component/Navbar/NavBar';
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SyntaxContainer from './CopySyntax/SyntaxContainer';
-import CssGrid from './Component/CssGrid';
+
 function App() {
   return (
     <div className="App">
