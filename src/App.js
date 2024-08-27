@@ -8,15 +8,6 @@ import SyntaxContainer from './CopySyntax/SyntaxContainer';
 import { Data } from "../src/Data/Data";
 function App() {
   const [syntaxData, setSyntaxData] = useState(Data);
-  //const [searchVal, setSearchVal] = useState("");
-  // const handleSearch=()=> {
-  //   if (searchVal === "") { setSyntaxData(Data); return; }
-  //   const filterBySearch = Data.filter((item) => {
-  //       if (item.Concept.toLowerCase()
-  //           .includes(searchVal.toLowerCase())) { return item; }
-  //   })
-  //   setSyntaxData(filterBySearch);
-  // }
   const onchangeSearch = (searchVal) => {
     if (searchVal === "" || searchVal === undefined) { setSyntaxData(Data); return; }
     const filterBySearch = Data.filter((item) => {
@@ -24,7 +15,6 @@ function App() {
         .includes(searchVal.toLowerCase())) { return item; }
     })
     setSyntaxData(filterBySearch);
-
   }
 
 

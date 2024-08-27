@@ -1611,5 +1611,41 @@ export default useFetch; `
     }
         ]
     
+},
+{
+       Category: REACT,
+       Concept: "Real Time Search Functionlity",
+       Img:reactImg,
+       Code: [
+           {
+               Logic: "Creating Search function and passing the Function as props to Navbar",
+               File: "App.js",
+               Syntax: ` const [syntaxData, setSyntaxData] = useState(Data);
+  const onchangeSearch = (searchVal) => {
+    if (searchVal === "" || searchVal === undefined) { setSyntaxData(Data); return; }
+    const filterBySearch = Data.filter((item) => {
+      if (item.Concept.toLowerCase()
+        .includes(searchVal.toLowerCase())) { return item; }
+    })
+    setSyntaxData(filterBySearch);
+  } `
+           },{
+           
+               Logic: "Calling Search function as props from Navbar",
+               File: "Navbar.js",
+               Syntax: ` <div class="d-flex" role="search">
+        <input class="form-control me-2" onChange={e => props.onchangeSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search"/>
+     
+      </div> `
+   }
+   ,{
+           
+    Logic: "Sending Function as props to NavBar and Filtered Data to Item Container",
+    File: "App.js",
+    Syntax: `  <NavBar onchangeSearch={onchangeSearch} />
+    <Route exact path="/" element={<><SyntaxContainer Data={syntaxData} /></>} />`
+}
+       ]
+   
 }
 ]
