@@ -22,8 +22,8 @@
 
   }
 .CardSyntaxs{
-  width: 12rem;
-  height: 15rem;
+  width: 11rem;
+  height: 1rem;
   padding: 1rem;
   background-color: black;
   color: white;
@@ -32,21 +32,10 @@
 
  
 }
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
-}
-
-:root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1.5);
-}
-
 .CardSyntax {
   background: #191c29;
-  width: var(--card-width);
-  height: var(--card-height);
+  width: 15rem;
+  height: 18rem;
  
   position: relative;
  
@@ -59,10 +48,22 @@
   cursor: pointer;
   font-family: cursive;
 }
-.CardSyntax:hover {
+ @property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 65vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+ .CardSyntax:hover {
   color: rgb(88 199 250 / 100%);
   transition: color 1s;
-}
+} 
 .CardSyntax:hover:before,
 .CardSyntax:hover:after {
   animation: none;
@@ -117,8 +118,7 @@
   100% {
     --rotate: 360deg;
   }
-}
-
+} 
 
   /* 2xl */
 @media (max-width: 1536px) {

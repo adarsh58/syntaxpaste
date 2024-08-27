@@ -7,11 +7,11 @@
     grid-row: auto;
 
     background: rgb(7, 6, 6);
-  color: #48abe0;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;      
-  gap:3rem
+    color: #48abe0;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;      
+    gap:1rem;
   /* -webkit-box-shadow:10px 0px 10px 45px rgba(45,255,196,0.9);
   -moz-box-shadow: 1px 10px 10px 45px rgba(45,255,196,0.9);
   box-shadow: 0px 10px 10px 10px rgba(45,255,196,0.9);  */
@@ -45,14 +45,26 @@
  @media (max-width: 640px) {
     .Card  {
      max-width: 475px;
-     gap:10rem
+     gap:1rem;
    }
+   .Card-text{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50%;
+}
  }
  
  /* xs */
  @media (max-width: 475px) {
    .Card  {
-     width: 100%;
-     gap:10rem
+     width: 475px;
+     gap:1rem;
    }
+   .Card-text{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    height: 50%;
+}
 }
