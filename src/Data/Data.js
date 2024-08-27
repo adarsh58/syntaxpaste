@@ -15,7 +15,7 @@ const LOGIC = "Logic"
 export const Data = [
   {
     Category: MongoDB,
-    Concept: "Setup Connection",
+    Concept: "Setup Connection MongoDB",
     Img: Mongo,
     Code: [
       {
@@ -43,7 +43,7 @@ connectToMongo(); `
   }
   , {
     Category: EXPRESS,
-    Concept: "Setting up API's",
+    Concept: "Setting up Express API's",
     Img: Express,
     Code: [
       {
@@ -477,7 +477,7 @@ export default Navbar`
   },
   {
     Category: REACT,
-    Concept: "Context API",
+    Concept: "UseContext Hook",
     Img:reactImg,
     Code: [
       {
@@ -718,7 +718,7 @@ export default List;`
     ]
   }, {
     Category: REACT,
-    Concept: "Fetch API call in Useffect()",
+    Concept: "Fetch API call in UseEffect() Hook",
     Img:reactImg,
     Code: [
       {
@@ -749,7 +749,7 @@ export default List;`
     ]
   }, {
     Category: "Github",
-    Concept: "PR cant be created, as NO files to compare",
+    Concept: "PR cant be created, as no files to compare",
     Img:Git,
     Code: [
       {
@@ -764,7 +764,7 @@ git push origin main -f`
   },
   {
     Category: "Java Script",
-    Concept: "ES6 Concepts",
+    Concept: "ES6/JS Concepts",
     Img:Js,
     Code: [
       {
@@ -1558,7 +1558,7 @@ export default Noteadd
 },
  {
         Category: REACT,
-        Concept: "Custom fetch hook",
+        Concept: "Custom fetchAPI hook",
         Img:reactImg,
         Code: [
             {

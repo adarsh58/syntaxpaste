@@ -1,10 +1,15 @@
 import React from 'react'
 import {Link } from "react-router-dom";
-const NavBar = () => {
+const NavBar = (props) => {
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container-fluid">
       <Link className="navbar-brand" to="/">Navbar</Link>
+      <div class="d-flex" role="search">
+        <input class="form-control me-2" onChange={e => props.onchangeSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search"/>
+     
+      </div>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -17,6 +22,7 @@ const NavBar = () => {
             <Link className="nav-link" to="/aboutus">About Us</Link>
           </li>
         </ul>
+      
       </div>
     </div>
   </nav>
