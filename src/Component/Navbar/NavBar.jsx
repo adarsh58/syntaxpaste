@@ -6,8 +6,8 @@ const NavBar = (props) => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container-fluid">
       <Link className="navbar-brand" to="/">Navbar</Link>
-      <div class="d-flex" role="search">
-        <input class="form-control me-2" onChange={e => props.onchangeSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search"/>
+      <div className="d-flex" style={{width:"30rem"}} role="search" >
+        <input className="form-control me-2" onChange={e => props.onchangeSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search"/>
      
       </div>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
