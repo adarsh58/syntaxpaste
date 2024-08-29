@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     grid-row: auto;
-
+    border-radius: 47rem;
     background: rgb(7, 6, 6);
     color: #48abe0;
     text-align: center;

@@ -6,8 +6,8 @@ const SyntaxContainer = (props) => {
   return (
     <div className="SyntaxContainer">
       <div className="Syntax">
-        {props.Data && props.Data.map((item) => {
-          return <Syntax item={item} />;
+        {props.Data && props.Data.map((item,index) => {
+          return <Syntax key={index} item={item} />;
         })}
       </div>
     </div>

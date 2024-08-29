@@ -19,7 +19,7 @@
     gap: 1rem;
     margin-top: 2rem;
     flex-wrap: wrap; 
-
+    border-radius: 4rem;
   }
 .CardSyntaxs{
   width: 11rem;
@@ -36,7 +36,7 @@
   background: #191c29;
   width: 15rem;
   height: 18rem;
- 
+  border-radius: 4rem;
   position: relative;
  
   justify-content: center;

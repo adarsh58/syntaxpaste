@@ -1633,8 +1633,8 @@ export default useFetch; `
            
                Logic: "Calling Search function as props from Navbar",
                File: "Navbar.js",
-               Syntax: ` <div class="d-flex" role="search">
-        <input class="form-control me-2" onChange={e => props.onchangeSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search"/>
+               Syntax: ` <div className="d-flex" role="search">
+        <input className="form-control me-2" onChange={e => props.onchangeSearch(e.target.value)} type="search" placeholder="Search" aria-label="Search"/>
      
       </div> `
    }
