@@ -1,14 +1,4 @@
 
-export const Data = [
-    {
-        Category: REACT,
-        Concept: "Lazy Loading / Suspense ",
-        Img: reactImg,
-        Code: [
-            {
-                Logic: "Light weight Components will be rendered first, and Heavy Comp will be rendered once all the data is fecthed untill then fallback element will be shown",
-                File: "Index.jsx",
-                Syntax: `
 import React, { Suspense, useEffect, useState } from "react";
 
 
@@ -83,9 +73,3 @@ const Index = () => {
 };
 
 export default Index;
-`
-            }
-        ]
-    }
-
-]

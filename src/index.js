@@ -7,13 +7,13 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import Css from './Demo/Css';
-import Index from './Demo/Hooks/Callback/Index';
+import Index from './Demo/lazy/Index';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Css/> */}
-    <App />
-    {/* <Index/> */}
+     {/* <App />  */}
+     <Index/>
   
   </React.StrictMode>
 );
