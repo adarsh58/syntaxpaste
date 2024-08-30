@@ -16,7 +16,7 @@ const CopyCode = ({ file, code, Logic }) => {
             <Divider />
             <p className="Logic">{Logic}</p>
           </div>
-          {/* <div className="CodeSnippet">{file !== "" ? "Code Snippet" : ""}</div> */}
+
           <div className="col-lg-9 col-md-9 col-xs-12 code">
             <PrismEditor codeText={code} />
           </div>

@@ -25,7 +25,7 @@ const PrismEditor=({codeText})=> {
       }}
     />
     <div className="btn">   <button type="button" disabled={!codeText} onClick={() =>  navigator.clipboard.writeText(`${code}`)} className="btn btn-primary btn-sm">Click To Copy</button></div>
- 
+        
     </>
   );
 }

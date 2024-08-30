@@ -9,5 +9,4 @@ const CodeEditor = (props) => {
     </div>
   )
 }
-
 export default CodeEditor

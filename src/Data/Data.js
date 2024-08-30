@@ -1647,5 +1647,183 @@ export default useFetch; `
 }
        ]
    
+},{
+  Category: REACT,
+  Concept: "Use Memo",
+  Img: reactImg,
+  Code: [
+      {
+          Logic: "Without Memo - On click of Button FilerByproduct function is getting called, where we are just updating the color of the text",
+          File: "Index.jsx",
+          Syntax: `
+import React, { useEffect, useState } from "react";
+
+const Index = () => {
+const [data, setData] = useState([]);
+const [flag, setFlag] = useState(false);
+
+const FetchAPI = async () => {
+const response = await fetch("https://dummyjson.com/products");
+const data = await response.json();
+setData(data.products);
+};
+const FilterByproduct = (res) => {
+console.log("called");
+return res?.length > 0 ? res.filter((item) => item.price > 10) : [];
+};
+useEffect(() => {
+FetchAPI();
+}, []);
+
+return (
+<div className="container">
+<button onClick={() => setFlag(!flag)} className="btn btn-primary">
+  {" "}
+  I will toggle the color
+</button>
+<h2 style={{ color: flag ? "blue" : "red" }}> My color got changed</h2>
+<ul>
+  {FilterByproduct(data).map((item) => {
+    return <li>{item.title}</li>;
+  })}
+</ul>
+</div>
+);
+};
+
+export default Index;
+`
+      },{
+          Logic: "With Memo - On click of Button FilerByproduct function is not getting called",
+          File: "Index.jsx",
+          Syntax: `import React, { useEffect, useMemo, useState } from "react";
+
+const Index = () => {
+const [data, setData] = useState([]);
+const [flag, setFlag] = useState(false);
+
+const FetchAPI = async () => {
+const response = await fetch("https://dummyjson.com/products");
+const data = await response.json();
+setData(data.products);
+};
+const FilterByproduct = (prod) => {
+console.log("called");
+return prod?.length > 0 ? prod.filter((item) => item.price > 10) : [1];
+};
+useEffect(() => {
+FetchAPI();
+}, []);
+
+const memorizedVersion = useMemo(() => FilterByproduct(data), [data]);
+
+return (
+<div className="container">
+<button onClick={() => setFlag(!flag)} className="btn btn-primary">
+  {" "}
+  I will toggle the color
+</button>
+<h2 style={{ color: flag ? "blue" : "red" }}> My color got changed</h2>
+<ul>
+  {memorizedVersion.map((item, index) => {
+    return <li key={index}>{item.title}</li>;
+  })}
+</ul>
+</div>
+);
+};
+
+export default Index;
+`
+      }
+  ]
+}, {
+  Category: REACT,
+  Concept: "Use Callback",
+  Img: reactImg,
+  Code: [
+      {
+          Logic: "Without Callback - On click of Button in Counter, both instances of Counter are getting rendered from Index.jsx",
+          File: "Index.jsx",
+          Syntax: `import React, { useState } from 'react'
+import Counter from './Counter';
+
+const Index = () => {
+const[countone,setcountOne]=useState(0);
+const[counttwo,setcountTwo]=useState(0);
+const handleCountOne =()=>{
+
+  setcountOne(countone=>countone+1)
+}
+const handleCountTwo =()=>{
+  setcountTwo(counttwo=>counttwo+1)
+}
+return (
+<div className='container'>
+  <Counter count={countone} onclickprops={handleCountOne}/>
+  <Counter count={counttwo} onclickprops={handleCountTwo}/>
+
+</div>
+)
+}
+
+export default Index
+`
+      },{
+          Logic: "Without Callback - On click of Button in Counter, both instances of Counter are getting rendered from Index.jsx",
+          File: "Counter.jsx",
+          Syntax: `import React,{memo} from 'react'
+
+
+const Counter = ({onclickprops,count}) => {
+
+return (
+<div className='container'>
+  <button onClick={onclickprops} className='btn btn-warning'>Click</button>
+  <div>
+      <p>{count}</p>
+  </div>
+</div>
+)
+}
+
+export default memo(Counter)
+
+
+`
+      },{
+          Logic: "With Callback - On click of Button in Counter,Only particular instances of Counter is getting rendered from Index.jsx",
+          File: "Index.jsx",
+          Syntax: `import React, { useCallback, useState } from 'react'
+import Counter from './Counter';
+
+const Index = () => {
+const[countone,setcountOne]=useState(0);
+const[counttwo,setcountTwo]=useState(0);
+const handleCountOne =()=>{
+
+  setcountOne(countone=>countone+1)
+}
+const handleCountTwo =()=>{
+  setcountTwo(counttwo=>counttwo+1)
+}
+
+const memorizedOne =useCallback(()=>handleCountOne(),[countone]);
+const memorizedTwo =useCallback(()=> handleCountTwo(),[counttwo])
+
+return (
+<div className='container'>
+  <Counter count={countone} onclickprops={memorizedOne}/>
+  <Counter count={counttwo} onclickprops={memorizedTwo}/>
+</div>
+)
+}
+
+export default Index
+
+
+`
+      }
+  ]
 }
 ]

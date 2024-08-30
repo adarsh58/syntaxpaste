@@ -39,9 +39,9 @@
   border-radius: 4rem;
   position: relative;
  
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-content: start;
   display: flex;
  
   color: rgb(88 199 250 / 0%);

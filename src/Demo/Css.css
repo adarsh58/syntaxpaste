@@ -1,0 +1,66 @@
+.Modcontainer
+{
+    max-width:1500px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+:root {
+    --card-height: 100px;
+    --card-width: calc(var(--card-height) * 1);
+
+    --medQuerymax : 1500px;
+    --child :  calc( var(----medQuerymax)- var(--card-width));
+  }
+/* 2xl */
+@media (max-width: 1200px) {
+    .Modcontainer {
+      max-width: calc(1200px - 100px)
+    }
+  }
+  @media (max-width: 1500px) {
+    .Modcontainer {
+      max-width: calc(1500px - 100px)
+    }
+  }
+  @media (max-width: 1400px) {
+    .Modcontainer {
+      max-width: calc(1400px - 100px)
+    }
+  }
+  @media (max-width: 1300px) {
+    .Modcontainer {
+      max-width: calc(1300px - 100px)
+    }
+  }
+
+.parent{
+   
+    display: flex;
+    position: relative;
+    width: 100%;
+    height:100%;
+   
+    justify-content: start;
+    flex-wrap: wrap;
+    align-content: start;
+ 
+    
+}
+
+.parent .item
+{
+    position: relative;
+    border: 1px solid black;
+    width:var(--card-width);
+    height: var(--card-height);
+    background: lime;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.item:nth-child(1)  /*first element in the item*/
+{
+    background: red;
+}
