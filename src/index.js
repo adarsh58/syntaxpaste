@@ -11,9 +11,9 @@ import Index from './Demo/lazy/Index';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Css/> */}
-     {/* <App />  */}
-     <Index/>
+
+     <App /> 
+     {/* <Index/> */}
   
   </React.StrictMode>
 );
