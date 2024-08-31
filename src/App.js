@@ -16,9 +16,6 @@ function App() {
     })
     setSyntaxData(filterBySearch);
   }
-
-
-
   return (
     <div className="App">
 

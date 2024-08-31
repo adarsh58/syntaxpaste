@@ -37,7 +37,7 @@ export default function CodeModal(props) {
             <div className="Concept"> {props.concept}</div>
           </Typography>   
           <Typography id="modal-modal-title" variant="h10" component="h4">
-            {props.code &&props.code.map((i,index) => {
+            {props.code && props.code.map((i,index) => {
               return <CopyCode key={index} file={i.File} Logic={i.Logic} code={i.Syntax} />;
             })}
           </Typography>
